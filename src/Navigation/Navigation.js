@@ -19,7 +19,7 @@ class Navigation extends Component {
 
             <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
-                <li className="active"><a href="#">Home</a></li>
+                <li className="active"><a href="#">Form</a></li>
                 <li><a href="#">Edid Proflie</a></li>
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown">Help Desk <b className="caret"></b></a>

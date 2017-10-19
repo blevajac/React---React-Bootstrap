@@ -17,7 +17,6 @@ class FormComponent extends Component {
 
     //First refs.comment is needed to get data from the child component
     //this.refs.comment.refs.comment
-
     var values  = {
         date: new Date(),
         email: this.refs.email.value.trim(),
@@ -27,6 +26,10 @@ class FormComponent extends Component {
     };
     this.props.addTicketList(values);
 
+    this.refs.email.value = "";
+    this.refs.issueType.value = "";
+    this.refs.department.value = "";
+    this.refs.comment.refs.comment = "Controlled!!!";
   };
 
   render() {
@@ -40,7 +43,7 @@ class FormComponent extends Component {
       		<div className="form-group">
       			<label htmlFor="issueType">Issue Type <span style={style}>*</span></label>
       			<select className="form-control" id="issueType" required ref="issueType">
-      				<option value="test">-----Select----</option>
+      				<option value="">-----Select----</option>
       				<option value="Access Related Issue">Access Related Issue</option>
       				<option value="Email Related Issues">Email Related Issues</option>
       				<option value="Hardware Request">Hardware Request</option>
